@@ -1,14 +1,67 @@
 :root {
-    /* Color variables */
-    --clr-slate-900: #1F314F;
-    --clr-slate-500: #68778D;
-    --clr-slate-300: #D5E1EF;
-    --clr-white: #FFFFFF;
-    /* Typography variables */
-    --fw-regular: 400;
-    --fw-bold: 700;
-    /* Spacing variables */
-    --spacing-500: 2.5rem;
-    --spacing-300: 1.5rem;
-    --spacing-200: 1rem; 
+  /* Color variables */
+  --clr-slate-900: #1f314f;
+  --clr-slate-500: #68778d;
+  --clr-slate-300: #d5e1ef;
+  --clr-white: #ffffff;
+  /* Typography variables */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  /* Spacing variables */
+  --spacing-500: 2.5rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-slate-300);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: auto;
+  width: 320px;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  padding-inline: var(--spacing-200);
+  padding-block: var(--spacing-200) var(--spacing-500);
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0477);
+
+  & .qr-code {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: var(--spacing-300);
+  }
+
+  & .card-copy {
+    font-family: "Outfit", serif;
+    text-align: center;
+    padding-inline: var(--spacing-200);
+
+    & h1 {
+      margin-block: 0 var(--spacing-200);
+      font-weight: var(--fw-bold);
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      color: var(--clr-slate-900);
+    }
+
+    & p {
+      margin: 0;
+      font-weight: var(--fw-regular);
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: 0.2px;
+      color: var(--clr-slate-500);
+    }
+  }
 }
