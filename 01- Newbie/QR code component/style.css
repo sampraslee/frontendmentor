@@ -1,3 +1,14 @@
-html {
-    background-color: aquamarine;
+:root {
+    /* Color variables */
+    --clr-slate-900: #1F314F;
+    --clr-slate-500: #68778D;
+    --clr-slate-300: #D5E1EF;
+    --clr-white: #FFFFFF;
+    /* Typography variables */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    /* Spacing variables */
+    --spacing-500: 2.5rem;
+    --spacing-300: 1.5rem;
+    --spacing-200: 1rem; 
 }
