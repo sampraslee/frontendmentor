@@ -1,0 +1,118 @@
+:root {
+  /* Color variables */
+  --clr-yellow: #f4d04e;
+  --clr-gray-950: #111111;
+  --clr-gray-500: #6b6b6b;
+  --clr-white: #ffffff;
+  /* Typography variables */
+  --font-family: "Figtree", serif;
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+  /* Spacing variables */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-300: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-yellow);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-preview-card {
+  background-color: var(--clr-white);
+  font-family: var(--font-family);
+  padding: var(--spacing-300);
+  width: min-content;
+  min-width: 327px;
+  max-width: 384px;
+  border-radius: 20px;
+  border: 1px inset var(--clr-gray-950);
+  box-shadow: 8px 8px #000000;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+
+  & .blog-img {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+
+    & .category {
+      background-color: var(--clr-yellow);
+      width: fit-content;
+      padding: var(--spacing-50) var(--spacing-150);
+      border-radius: 4px;
+
+      font-weight: var(--fw-extra-bold);
+      font-size: 14px;
+      letter-spacing: 0px;
+      line-height: 1.5;
+    }
+
+    & .publish-date {
+      font-weight: var(--fw-medium);
+      font-size: 14px;
+      letter-spacing: 0px;
+      line-height: 1.5;
+    }
+
+    & .title {
+      font-weight: var(--fw-extra-bold);
+      font-size: 24px;
+      letter-spacing: 0px;
+      line-height: 1.5;
+    }
+
+    & .title:hover {
+      color: var(--clr-yellow);
+      cursor:pointer;
+    }
+    
+    & .description {
+      color: var(--clr-gray-500);
+      font-weight: var(--fw-medium);
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 1.5;
+    }
+  }
+
+  & .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-150);
+
+    & img {
+      width: 32px;
+      height: 32px;
+    }
+
+    & .author-name {
+      font-weight: var(--fw-extra-bold);
+      font-size: 14px;
+      letter-spacing: 0px;
+      line-height: 1.5;
+    }
+  }
+}
