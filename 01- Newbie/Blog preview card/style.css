@@ -83,6 +83,11 @@ main {
       line-height: 1.5;
     }
 
+    & .title:hover {
+      color: var(--clr-yellow);
+      cursor:pointer;
+    }
+    
     & .description {
       color: var(--clr-gray-500);
       font-weight: var(--fw-medium);
