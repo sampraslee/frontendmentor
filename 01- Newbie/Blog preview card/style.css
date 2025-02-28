@@ -36,7 +36,9 @@ main {
   background-color: var(--clr-white);
   font-family: var(--font-family);
   padding: var(--spacing-300);
-  width: 384px;
+  width: min-content;
+  min-width: 327px;
+  max-width: 384px;
   border-radius: 20px;
   border: 1px inset var(--clr-gray-950);
   box-shadow: 8px 8px #000000;
