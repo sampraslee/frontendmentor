@@ -1,0 +1,49 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Custom Poperties */
+:root {
+    /* colors */
+    --grey-700: #333333;
+    --grey-800: #1F1F1F;
+    --grey-900: #141414;
+    --green: #C4F82A;
+    --white: #FFFFFF;
+
+    /* typography */
+    --font-family: "Inter", sans-serif;
+    --text-preset-1: 700 24px/1.5 var(--font-family);
+    --text-preset-2: 400 14px/1.5 var(--font-family);
+    --text-preset-2-bold: 700 14px/1.5 var(--font-family);
+
+    /* spacing */
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px; 
+}
+
+.name {
+    font: var(--text-preset-1);
+}
+
+.location {
+    font: var(--text-preset-2-bold);
+    color: var(--green);
+}
+
+.profile-bio {
+    font: var(--text-preset-2);
+}
