@@ -3,47 +3,110 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
 /* Custom Poperties */
 :root {
-    /* colors */
-    --grey-700: #333333;
-    --grey-800: #1F1F1F;
-    --grey-900: #141414;
-    --green: #C4F82A;
-    --white: #FFFFFF;
+  /* colors */
+  --grey-700: #333333;
+  --grey-800: #1f1f1f;
+  --grey-900: #141414;
+  --green: #c4f82a;
+  --white: #ffffff;
 
-    /* typography */
-    --font-family: "Inter", sans-serif;
-    --text-preset-1: 700 24px/1.5 var(--font-family);
-    --text-preset-2: 400 14px/1.5 var(--font-family);
-    --text-preset-2-bold: 700 14px/1.5 var(--font-family);
+  /* typography */
+  --font-family: "Inter", sans-serif;
+  --text-preset-1: 700 24px/1.5 var(--font-family);
+  --text-preset-2: 400 14px/1.5 var(--font-family);
+  --text-preset-2-bold: 700 14px/1.5 var(--font-family);
 
-    /* spacing */
-    --spacing-50: 4px;
-    --spacing-100: 8px;
-    --spacing-150: 12px;
-    --spacing-200: 16px;
-    --spacing-300: 24px;
-    --spacing-500: 40px; 
+  /* spacing */
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
 }
 
-.name {
-    font: var(--text-preset-1);
+/* Styles */
+body {
+  background-color: var(--grey-900);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.location {
-    font: var(--text-preset-2-bold);
-    color: var(--green);
-}
+.profile-card {
+  background-color: var(--grey-800);
+  padding: var(--spacing-500);
+  border-radius: 12px;
+  max-width: 384px;
+  min-width: 327px;
+  text-align: center;
 
-.profile-bio {
+  & > * + * {
+    margin-block-start: 24px;
+  }
+
+  & .profile-img {
+    width: 88px;
+    height: 88px;
+    border-radius: 100%;
+  }
+
+  & .profile-info {
+    & .name {
+      font: var(--text-preset-1);
+      color: var(--white);
+    }
+    & .location {
+      font: var(--text-preset-2-bold);
+      color: var(--green);
+    }
+  }
+
+  & .profile-bio {
     font: var(--text-preset-2);
+    color: white;
+  }
+
+  & .profile-links {
+    & > * + * {
+      margin-block-start: 16px;
+    }
+    & li {
+      list-style: none;
+      background-color: var(--grey-700);
+      padding: 12px;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: var(--green);
+        cursor: pointer;
+
+        & a {
+          color: var(--grey-700);
+        }
+      }
+    }
+    & a {
+      text-decoration: none;
+      font: var(--text-preset-2-bold);
+      color: var(--white);
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: var(--spacing-300);
+  }
 }
